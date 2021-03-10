@@ -1,10 +1,9 @@
-
 <template>
   <div id="app">
-     <section class="hero is-warning is-bold is-fullheight">
+    <section class="hero is-warning is-bold is-fullheight">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title">{{msg}}</h1>
+          <todo-card></todo-card>
         </div>
       </div>
 
@@ -28,14 +27,19 @@
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Hello, et bienvenue sur la demo TodoList en Vue.js!'
+  import TodoCard from './components/TodoCard'
+
+  export default {
+    name: 'app',
+    components: {
+      TodoCard
+    },
+    data () {
+      return {
+        msg: 'Hello, et bienvenue sur la demo TodoList en Vue.js!'
+      }
     }
   }
-}
 </script>
 
 <style>
